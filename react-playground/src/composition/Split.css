@@ -1,0 +1,7 @@
+.split {
+  flex: 1;
+  padding: 1em;
+}
+.split a {
+  color: red;
+}
