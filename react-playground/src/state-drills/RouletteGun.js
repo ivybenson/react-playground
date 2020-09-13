@@ -6,14 +6,46 @@ export default class RouletteGun extends Component {
     bulletsInChamber: 8,
   };
 
-  gun = {
-    shot: "yes",
+  state = {
+    chamber: null,
+    spinningTheChamber: false,
   };
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
+  handleClick = () => {
+    this.setState({
+      spinningTheChamber: true,
+    });
+    this.timeout = setTimeout(() => {
+      const randomChamber = Math.ceil(Math.random() * 8);
+
+      this.setState({
+        chamber: randomChamber,
+        spinningTheChamber: false,
+      });
+    }, 2000);
+  };
+
+  renderDisplay() {
+    const { chamber, spinningTheChamber } = this.state;
+    const { bulletInChamber } = this.props;
+    if (spinningTheChamber) {
+      return "spinning the chamber and pulling the trigger...";
+    } else if (chamber === bulletInChamber) {
+      return "BANG!!!!";
+    } else {
+      return "you are safe!";
+    }
+  }
+
   render() {
     return (
-      <div>
-        <p>test your luck with the gun {this.state.gun}</p>
-        <button>Pull the trigger!</button>
+      <div className="RouletteGun">
+        <p>{this.renderDisplay()}</p>
+        <button onClick={this.handleClick}>Pull the trigger!</button>
       </div>
     );
   }
