@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import HelloWorld from "./HelloWorld.js";
+import RouletteGun from "./RouletteGun.js";
 
-describe(`HelloWorld Component`, () => {
+describe(`RouletteGun Component`, () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<HelloWorld />, div);
+    ReactDOM.render(<RouletteGun />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
