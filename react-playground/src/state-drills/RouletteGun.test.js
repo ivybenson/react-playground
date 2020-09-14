@@ -10,6 +10,6 @@ describe(`RouletteGun Component`, () => {
   });
 
   it.skip("renders the UI as expected", () => {
-    expect(renderer.create(<HelloWorld />).toJSON()).toMatchSnapshot();
+    expect(renderer.create(<RouletteGun />).toJSON()).toMatchSnapshot();
   });
 });
