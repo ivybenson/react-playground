@@ -5,7 +5,7 @@ export default function ShoppingList(props) {
   return (
     <ul>
       {props.items.map((item, i) => (
-        <ShoppingItem key={i} item={item} />
+        <ShoppingItem key={i} item={item} {...props} />
       ))}
     </ul>
   );
