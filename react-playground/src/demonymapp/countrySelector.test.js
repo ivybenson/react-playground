@@ -1,8 +1,7 @@
-import demonyn from "./demonym";
-import Demonym from "./demonym";
+import countryselector from "./countryselector";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<Demonym />, div);
+  ReactDOM.render(<countryselector />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
