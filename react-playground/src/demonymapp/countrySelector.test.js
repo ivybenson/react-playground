@@ -1,4 +1,4 @@
-import countryselector from "./countryselector";
+import CountrySelector from "./countrySelector";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
