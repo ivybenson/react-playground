@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import AppLang from "./lang-context/AppLang";
+import AppLang from "./lang-context2/AppLang";
 
 ReactDOM.render(<AppLang />, document.getElementById("root"));
